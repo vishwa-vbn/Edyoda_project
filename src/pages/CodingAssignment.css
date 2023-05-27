@@ -1,0 +1,178 @@
+.div,
+.icon-1 {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+.div {
+  position: relative;
+  letter-spacing: -0.01em;
+  line-height: 18px;
+  font-weight: 600;
+  justify-content: center;
+  width: 17.73px;
+  height: 22.8px;
+}
+.icon-1 {
+  border-radius: var(--br-981xl);
+  background-color: var(--color-dodgerblue);
+ 
+
+  width: 32px; 
+  height: 32px; 
+  overflow: hidden;
+  flex-direction: column;
+  padding: 5px 0; 
+
+  box-sizing: border-box;
+  justify-content: flex-start;
+}
+.text-1 {
+  position: relative;
+  font-size: var(--font-size-base);
+  letter-spacing: -0.01em;
+  color: var(--color-darkslategray);
+}
+.progress-bar,
+.stage-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stage-1 {
+  width: 60px; 
+
+  flex-direction: column;
+  gap: var(--gap-9xs);
+}
+.progress-bar {
+  align-self: stretch;
+  flex-direction: row;
+  gap: 120px; 
+}
+.text {
+  align-self: stretch;
+  position: relative;
+  line-height: 125.3%;
+  font-weight: 600;
+  font-size: var(--font-size-lg);
+}
+.form-header {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-darkslategray);
+}
+.secondary-button {
+  flex: 1;
+}
+.button-container {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-base);
+}
+.razorpay-icon {
+  position: relative;
+  width: 100px; 
+  height: 35px;
+  object-fit: cover;
+}
+.form,
+.icon-container {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.form {
+  border-radius: var(--br-5xs);
+  background-color: var(--color-white);
+  width: 480px; 
+  flex-direction: column;
+  padding: 24px var(--padding-5xl);
+  box-sizing: border-box;
+  margin-top: 100px;
+  gap: 20px; 
+}
+.coding-assignment,
+.content-container {
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+}
+.content-container {
+  width: 100%;
+  height: fit-content;
+  flex-shrink: 0;
+  flex-direction: row;
+  padding: 48px 68px 40px; 
+  box-sizing: border-box;
+  align-items: flex-start;
+  gap: 240px; 
+  background-image: url(/public/content-container@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.coding-assignment {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: var(--font-size-5xl);
+  color: var(--color-white);
+  font-family: var(--font-roboto);
+}
+
+
+@media only screen and (max-width: 900px)  {
+
+  .content-container
+  {
+    margin-top: 200px;
+    display: block;
+    text-align: center;
+  }
+  .form {
+    width: 100%;
+    padding: 20px;
+    gap: 10px;
+  }
+  .at-just-wrapper{
+    font-size: 40px;
+  }
+
+  .header{
+    font-size: 40px;
+  }
+  .stage-1 {
+    width: 60px;
+    gap: var(--gap-6xs);
+  }
+
+  .progress-bar {
+    gap: 80px;
+  }
+
+  .text {
+    font-size: var(--font-size-base);
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .razorpay-icon {
+    width: 80px;
+    height: 28px;
+  }
+}
