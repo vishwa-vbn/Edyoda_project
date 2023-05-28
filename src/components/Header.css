@@ -168,13 +168,13 @@ margin-top: 20px;
 }
 .right-content
 {
-  margin-top: -190px;
+  margin-top: -170px;
   text-align: center;
 }
 
   .logo {
-    width: 100px;
-    font-size: var(--font-size-17xl);
+    width:150px;
+    font-size: 35px;
   }
 
   .container {

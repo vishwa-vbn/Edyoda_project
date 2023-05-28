@@ -176,3 +176,15 @@
     height: 28px;
   }
 }
+
+
+
+@media only screen and (max-width:400px)
+{
+.text-1,.icon-1
+{
+  font-size: 12px;
+
+}
+}
+

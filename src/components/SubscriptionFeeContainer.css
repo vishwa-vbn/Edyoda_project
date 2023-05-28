@@ -102,3 +102,95 @@
   color: var(--color-darkslategray);
   font-family: var(--font-roboto);
 }
+@media only screen and (max-width:650px)
+{
+
+  .alert{
+    width:100%;
+
+  }
+  .alt
+  {
+    width:100%;
+  margin-top: 15px;
+    font-size: 13px;
+  }
+  .alt div  {
+    padding-bottom: 5px;
+
+  }
+  .alert-body
+  {
+  
+    padding-top: 25px;
+    font-size: 13px;
+    width:100%;
+  }
+  
+}
+
+@media only screen and (max-width:400px)
+{
+
+  .alt
+  {
+    display: block;
+    width:100%;
+  margin-top: 15px;
+    font-size: 13px;
+  }
+  .alert-body
+  {
+  
+    display: block;
+    margin-top: 25px;
+    padding-top:35px;
+    font-size: 13px;
+    width:100%;
+    margin-left: 0px;
+  }
+  .text24,.text25
+  {
+    width:fit-content;
+   margin: auto;
+  }
+
+  .alert-header
+  {
+    font-size: 13px;
+  }
+  .alt2{
+   display: block;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width:auto;
+    height: fit-content;
+  }
+
+  .input-container
+  {
+    font-size: 13px;
+  }
+  .text-field-3
+  {
+    font-size: 13px;
+  }
+  .tag{
+     width:auto;
+     font-size: 10px;
+
+  }
+  input[type=radio]
+  {
+    width:15px;
+    height:15px;
+  }
+  .text14,.text9,.text8
+  {
+    font-size: 11px;
+  }
+
+
+
+}
+

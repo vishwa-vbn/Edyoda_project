@@ -2,7 +2,6 @@ import { Button } from "@mui/material";
 import Header from "../components/Header";
 import ContainerLockup from "../components/ContainerLockup";
 import InputContainer from "../components/InputContainer";
-import SubscriptionFeeContainer from "../components/SubscriptionFeeContainer";
 import "./CodingAssignment.css";
 const CodingAssignment = () => {
   return (
@@ -29,7 +28,6 @@ const CodingAssignment = () => {
             <div className="text">Select your subcription plan</div>
           </div>
           <InputContainer />
-          <SubscriptionFeeContainer />
           <div className="button-container">
             <Button
               className="secondary-button"

@@ -23,7 +23,7 @@ const Header = () => {
     
   };
 
-    const isMobile = window.innerWidth <= 600;
+    const isMobile = window.innerWidth <= 1000;
 
   return (
     <div className="nav-bar">

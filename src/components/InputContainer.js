@@ -1,15 +1,56 @@
 
+
+
 import React, { useState } from "react";
 import { Button } from "@mui/material";
 import SubscriptionContainer from "./SubscriptionContainer";
+import SubscriptionFeeContainer from "./SubscriptionFeeContainer";
 import "./InputContainer.css";
 import "./SubscriptionContainer.css";
 
 const InputContainer = () => {
   const [selectedOption, setSelectedOption] = useState(1);
+  const [selectedSubscription, setSelectedSubscription] = useState({
+    subscriptionDuration: "12 Months Subscription",
+    subscriptionPrice: "₹99",
+    subscriptionDurationPrice: "₹8",
+  });
 
   const handleRadioChange = (option) => {
     setSelectedOption(option);
+
+    switch (option) {
+      case 1:
+        setSelectedSubscription({
+          subscriptionDuration: "12 Months Subscription",
+          subscriptionPrice: "₹99",
+          subscriptionDurationPrice: "₹8",
+        });
+        break;
+      case 2:
+        setSelectedSubscription({
+          subscriptionDuration: "12 Months Subscription",
+          subscriptionPrice: "₹179",
+          subscriptionDurationPrice: "₹15",
+        });
+        break;
+      case 3:
+        setSelectedSubscription({
+          subscriptionDuration: "6 Months Subscription",
+          subscriptionPrice: "₹149",
+          subscriptionDurationPrice: "₹25",
+        });
+        break;
+      case 4:
+        setSelectedSubscription({
+          subscriptionDuration: "3 Months Subscription",
+          subscriptionPrice: "₹99",
+          subscriptionDurationPrice: "₹33",
+        });
+        break;
+      default:
+        break;
+    }
   };
 
   return (
@@ -21,6 +62,7 @@ const InputContainer = () => {
           alt=""
           src="/radio-button.svg"
           checked={selectedOption === 1}
+          disabled
           onChange={() => handleRadioChange(1)}
         />
         <div className="text-container6">
@@ -94,6 +136,12 @@ const InputContainer = () => {
         subscriptionDurationPrice="₹33"
         selectedOption={selectedOption}
         handleRadioChange={handleRadioChange}
+      />
+
+      <SubscriptionFeeContainer
+        subscriptionDuration={selectedSubscription.subscriptionDuration}
+        subscriptionPrice={selectedSubscription.subscriptionPrice}
+        subscriptionDurationPrice={selectedSubscription.subscriptionDurationPrice}
       />
     </div>
   );
