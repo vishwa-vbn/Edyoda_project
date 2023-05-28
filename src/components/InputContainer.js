@@ -3,10 +3,8 @@
 
 import React, { useState } from "react";
 import { Button } from "@mui/material";
-import SubscriptionContainer from "./SubscriptionContainer";
 import SubscriptionFeeContainer from "./SubscriptionFeeContainer";
 import "./InputContainer.css";
-import "./SubscriptionContainer.css";
 
 const InputContainer = () => {
   const [selectedOption, setSelectedOption] = useState(1);
@@ -58,10 +56,11 @@ const InputContainer = () => {
       <div className="text-field-1">
         <input
           type="radio"
-          className="radio-button-icon2"
+          className="radio-button-icon2 "
           alt=""
           src="/radio-button.svg"
           checked={selectedOption === 1}
+          checked
           disabled
           onChange={() => handleRadioChange(1)}
         />
@@ -92,10 +91,11 @@ const InputContainer = () => {
       <div className="text-field-2">
         <input
           type="radio"
-          className="radio-button-icon1"
+          className="radio-button-icon1  radio-button-icon"
           alt=""
           src="/radio-button1.svg"
           checked={selectedOption === 2}
+          
           onChange={() => handleRadioChange(2)}
         />
         <div className="text-container6">
@@ -122,21 +122,55 @@ const InputContainer = () => {
         </Button>
       </div>
 
-      <SubscriptionContainer
-        subscriptionDuration="6 Months Subscription "
-        subscriptionPrice="₹149"
-        subscriptionDurationPrice="₹25"
-        selectedOption={selectedOption}
-        handleRadioChange={handleRadioChange}
-      />
+      <div className="text-field-3">
+        <input
+          type="radio"
+          className="radio-button-icon1 .radio-button-icon"
+          alt=""
+          src="/radio-button.svg"
+          name="subscription"
+          checked={selectedOption === 3}
+          onChange={() => handleRadioChange(3)}
+        />
+        <div className="text-container5">
+          <div className="text7">6 Months Subscription </div>
+          <div className="left-text-container">
+            <div className="top-text">
+              <div className="text8">Total</div>
+              <div className="text9">₹149</div>
+            </div>
+            <div className="bottom-text">
+              <div className="text10">₹25</div>
+              <div className="text11">/mo</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <SubscriptionContainer
-        subscriptionDuration="3 Months Subscription "
-        subscriptionPrice="₹99"
-        subscriptionDurationPrice="₹33"
-        selectedOption={selectedOption}
-        handleRadioChange={handleRadioChange}
-      />
+      <div className="text-field-4">
+        <input
+          type="radio"
+          className="radio-button-icon1  .radio-button-icon"
+          alt=""
+          src="/radio-button.svg"
+          name="subscription"
+          checked={selectedOption === 4}
+          onChange={() => handleRadioChange(4)}
+        />
+        <div className="text-container5">
+          <div className="text7">3 Months Subscription </div>
+          <div className="left-text-container">
+            <div className="top-text">
+              <div className="text8">Total</div>
+              <div className="text9">₹99</div>
+            </div>
+            <div className="bottom-text">
+              <div className="text10">₹33</div>
+              <div className="text11">/mo</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <SubscriptionFeeContainer
         subscriptionDuration={selectedSubscription.subscriptionDuration}

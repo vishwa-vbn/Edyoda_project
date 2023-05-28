@@ -1,6 +1,6 @@
 
-
 import "antd/dist/antd.min.css";
+import { useState } from "react";
 import { Button as MuiButton } from "@mui/material";
 import { Menu, Dropdown } from "antd";
 import { DownOutlined, UserOutlined } from "@ant-design/icons";
@@ -20,10 +20,20 @@ const Header = () => {
   ];
 
   const handleLoginClick = () => {
-    
+    window.location.href = "https://university.edyoda.com/login"; 
   };
 
-    const isMobile = window.innerWidth <= 1000;
+  const handleJoinNowClick = () => {
+    window.location.href = "https://university.edyoda.com/registration"; 
+  };
+
+  const [isSearchBarVisible, setSearchBarVisible] = useState(false);
+
+  const toggleSearchBar = () => {
+    setSearchBarVisible(!isSearchBarVisible);
+  };
+
+  const isMobile = window.innerWidth <= 1000;
 
   return (
     <div className="nav-bar">
@@ -71,20 +81,37 @@ const Header = () => {
         </div>
         <div className="right-content">
           <div className="search-container">
-          {isMobile ? (
-            <input type="text" placeholder="search" />
-      ) : (
-        <input type="text" placeholder="" />
-      )}
-            
-            <img className="search-icon" alt="" src="/search-icon.svg" />
+            {isMobile ? (
+              <input
+                type="text"
+                placeholder="search"
+                className={`search-input ${isSearchBarVisible ? "active" : ""}`}
+              />
+            ) : (
+              <input
+                type="text"
+                placeholder=""
+                className={`search-input ${isSearchBarVisible ? "active" : ""}`}
+              />
+            )}
+            <img
+              className="search-icon"
+              alt=""
+              src="/search-icon.svg"
+              onClick={toggleSearchBar}
+            />
           </div>
           <div className="log-in">
             <div className="text1" onClick={handleLoginClick}>
               Log in
             </div>
           </div>
-          <MuiButton variant="contained" color="primary" className="logbtn">
+          <MuiButton
+            variant="contained"
+            color="primary"
+            className="logbtn"
+            onClick={handleJoinNowClick}
+          >
             Join now
           </MuiButton>
         </div>
